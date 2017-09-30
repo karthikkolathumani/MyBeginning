@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    int numberofrows;
+    scanf("%d",&numberofrows);
+    
+    for(int i=0;i<numberofrows;i++){
+        for(int j=0;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    
+    
+}
