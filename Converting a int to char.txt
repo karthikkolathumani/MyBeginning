@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+
+void main(){
+int n=-12345;
+int sign,i=0;
+char s[100];
+if((sign=n)<0){
+n=-n;}
+do{
+    s[i++]=n%10+'0';
+}
+while((n/=10)>0);
+
+if(sign<0)
+s[i++]='-';
+
+printf("%s",s);
+
+
+
+}
