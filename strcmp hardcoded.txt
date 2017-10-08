@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int  strcmp(char *p,char *q){
+  for(;*p==*q;p++,q++){
+      if(*p=='\0'){
+          return 0;
+      } } 
+     
+     return (*p-*q);
+    
+    
+}
+
+void main(){
+    char s[100];
+    char t[100];
+    printf("enter\n ");
+    scanf("%s",&s);
+    printf("2nd\n");
+    scanf("%s",&t);
+    int out=strcmp(s,t);
+    printf("%d\n",out);
+}
