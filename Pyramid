@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    int numberofrows;
+    scanf("%d",&numberofrows);
+    
+    for(int row=1;row<=numberofrows;row++){
+        for(int space=numberofrows-row;space>=1;space--){
+            printf(" ");
+        }
+        for(int colstar=1;colstar<=(row*2)-1;colstar++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    
+}

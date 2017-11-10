@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int number,power,count=0,answer=1;
+   
+    scanf("%d",&number);
+    scanf("%d",&power);
+    
+while(count<power){
+    answer*=number;
+    count++;
+}
+printf("%d",answer);
+
+
+    
+}
