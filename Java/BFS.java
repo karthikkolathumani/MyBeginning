@@ -19,6 +19,7 @@ public class BFS {
 		
 	void addEdge(int v , int w) {
 		adj[v].add(w); 
+		adj[w].add(v); // Comment this for directed graphs
 	}
 	
 	
