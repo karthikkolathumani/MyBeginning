@@ -13,7 +13,7 @@ public class CheckPalindromeandPermutation {
 		
 		HashMap<Character,Integer> map = new HashMap<>();
 		//Integer a = 1;
-		int countEven = 0;
+		//int countEven = 0;
 		int countOdd = 0;
 		check = check.toLowerCase();
 		for(int i = 0; i<check.length() ; i++) {
@@ -29,26 +29,24 @@ public class CheckPalindromeandPermutation {
 			
 			Integer count = entry.getValue();
 			//System.out.println(count);
-			if(count%2==0) {
-				countEven ++;
-			}
-			else {
+			if(count%2!=0) {
 				countOdd ++;
 			}
+			
 		}
 		
 		
 		for(Entry<Character,Integer> entry : map.entrySet()) {
 			System.out.println(entry);
 		}
-		return 	checkPal(countEven,countOdd);
+		return 	checkPal(countOdd);
 		
 		
 		
 	}
 
-	private static boolean checkPal(int countEven, int countOdd) {
-		System.out.println(countEven+" "+ countOdd);
+	private static boolean checkPal( int countOdd) {
+		//System.out.println(countEven+" "+ countOdd);
 		if(countOdd>1) {
 			return false;
 		}
