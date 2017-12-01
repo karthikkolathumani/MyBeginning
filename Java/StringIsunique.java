@@ -32,7 +32,7 @@ public class StringIsunique {
 	public static void main(String[] args) {
 		String check = "abcd";
 		
-		System.out.println(isUnique(check));
+		//System.out.println(isUnique(check));
 		
 		
 	}
