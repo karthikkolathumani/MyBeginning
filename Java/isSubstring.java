@@ -5,18 +5,24 @@ public class isSubstring {
 static String a = "devops";
 static String b = "evo";
 public static void main(String[] args) {
-	boolean index = isSub(a,b);
-	System.out.println(index);
+	isSub(a,b);
+	
 }
 public static boolean isSub(String a,String b) {
 Pattern pattern  = Pattern.compile("(evo){1,}");
 Matcher match = pattern.matcher(a);
-
+int start=-1;
+int end=-1;
 while(match.find()) {
-	System.out.println(match.start()+" "+ match.end());
+start = match.start();
+end = match.end();
 }
-return true;
 
+if(start<0 && end<0) {
+	return false;
+}
+System.out.println("Starts at : " + start);
+return true;
 }
 
 }
