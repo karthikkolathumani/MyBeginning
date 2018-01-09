@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 public class MaximumSumSubArray {
 	public static void main(String[] args) {
-		int array[] = {-2,12,3,12,123,324,123,54};
+		int array[] = {-2};
 		findMaxSum(array);
 		findMaxSumCummulativeFrequency(array);
 		findMaxSumDp(array);
