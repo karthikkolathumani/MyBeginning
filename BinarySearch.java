@@ -1,57 +1,26 @@
-import java.util.*;
+package leetcode;
+
 public class BinarySearch {
-	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//		int a [] = new int[5];
-//		
-//		for(int i=0;i<a.length;i++) {
-//			a[i] = sc.nextInt();
-//		}
-//		
-//		int find = sc.nextInt();
+
+	public static int search(int arr[], int low,int high, int key,boolean left) {
 		
-		//System.out.println(search(a,find,0,a.length-1));
-		//System.out.println(searchI(a,find));
-		
-		System.out.println(Double.MAX_VALUE);
-		System.out.println(Double.MIN_VALUE);
-	}
-	
-	
-	//Recursive
-	public static int search(int a[],int find, int low,int high) {
-		
-		if(low> high) return -1;
-		
+		if(low < high) {
 			int mid = (low+high)/2;
-			if(find < a[mid]) return  search(a,find,low,mid-1);
-			else if(find > a[mid]) return search(a,find,mid+1,high);
-			else return mid;	
-	}
-	
-	//Iterative
-	public static int searchI(int a[],int find) {
-		int low = 0;
-		int high = a.length - 1;
-		while(low<=high) {
-			int mid = (low+high)/2;
-			if(find < a[mid]) high = mid - 1;
-			else if(find > a[mid]) low = mid+1;
-			else return mid;
+			
+			if(arr[mid] > key || (left && arr[mid] == key)) {
+				return search(arr,low,mid,key,left);
+			}
+			else {
+			
+				return search(arr,mid+1,high,key,left);
+			}
 		}
-		
-		return -1;
-		
+		return low;
 	}
 	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,6,7,7,7,7,7,7,7};
+		System.out.println(search(arr,0,arr.length,7,true));
+		//System.out.println(search(arr,0,arr.length,7,false)-1);
+	}
 }
-
-
-
-
-
-
-
-
-
-//11 12 13 14 15 16 17 18 19 20 21
